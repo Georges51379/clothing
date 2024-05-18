@@ -7,7 +7,7 @@
 <body>
     <!-- INCLUDES SECTION -->
     <?php
-        include 'include/arrow_to_top.inc.php';
+       include 'include/arrow_to_top.inc.php';
         include 'include/shop-navbar.inc.php';
         include 'include/shop-banner.inc.php';
     ?>

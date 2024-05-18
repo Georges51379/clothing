@@ -125,7 +125,6 @@ input[type=checkbox] {
   }
 }
 
-
 /* START WRAPPER**/
 .wrapper{
   margin: 4% 1% 4% 1%;
@@ -298,7 +297,7 @@ input[type=checkbox] {
   border-radius: 7px;
 }
 
-.rod-title{
+.prod-title{
   font-weight: 500;
 }
 
@@ -599,7 +598,7 @@ button{
 
 
 
-
+/* CHECK ERROR HERE */
 /* The grid: Four equal columns that floats next to each other */
 .column {
   float: left;
@@ -627,11 +626,13 @@ button{
 }
 
 /* The expanding image container */
-.container {
+.container-close {
   position: relative;
-  display: none;
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+  margin-bottom: 4%;
 }
-
 /* Expanding image text */
 #imgtext {
   position: absolute;
@@ -663,6 +664,8 @@ button{
     width: 100%;
   }
 }
+/**/
+
 
 .product-detail-page {
   max-width: 1200px;
@@ -771,3 +774,5 @@ button{
 .related-product {
   display: inline-block;
 }
+
+

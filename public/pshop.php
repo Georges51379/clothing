@@ -33,7 +33,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container-close">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
   <img id="expandedImg" style="width:100%">
   <div id="imgtext"></div>
