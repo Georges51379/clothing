@@ -775,4 +775,47 @@ button{
   display: inline-block;
 }
 
+/* Style for the about section */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  background-color: #f9f9f9; /* Light gray background color */
+}
 
+.about-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style for the random section */
+.random-section {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #cff1f773; /* Lighter gray background color */
+}
+
+.random-image {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.random-text {
+  flex: 1;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+  }
+
+  .random-section {
+    flex-direction: column;
+  }
+}
