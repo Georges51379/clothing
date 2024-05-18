@@ -79,7 +79,6 @@
                     </div>
                     <button>Add to Cart</button>
                 </div>
-  
         <div class="product">
                     <div class="img">
                         <img class="prod-img" src="https://images.pexels.com/photos/277319/pexels-photo-277319.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">

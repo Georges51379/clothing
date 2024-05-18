@@ -25,4 +25,3 @@ function hamburgerResponsive() {
       x.className = "topnav";
     }
   }
-  
