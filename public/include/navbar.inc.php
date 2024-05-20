@@ -9,7 +9,7 @@
             <li><a href="shop.php">shop</a></li>
             <li><a href="#sale">sale</a></li>
             <li><a href="aboutus.php">about us</a></li>
-            <li><a href="#contact">contact us</a></li>
+            <li><a href="contactus.php">contact us</a></li>
         </div>
         </ul>
 </nav>
