@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+h1 {
+  text-align: center;
+  margin: 3% 0 3% 0;
+}
+
 a{
   text-transform: capitalize;
   text-decoration: none;
@@ -138,6 +143,7 @@ input[type=checkbox] {
   background-color: #141414;
   color: #fff;
   padding: 50px 0;
+  margin-top: calc(100vh - 150px);
 }
 
 .footer-content {
@@ -970,3 +976,263 @@ button{
   background-color: #0056b3;
 }
 /*END login user.PHP*/
+
+/* ACCOUNT INFORMATION*/
+
+.account-information,
+.shipping-information {
+  flex-basis: 45%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  background-color: #f00;
+  color: #fff;
+  padding: 10px 2;
+}
+/* end account information*/
+
+/* WISHLIST START*/
+
+#wishlist-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#wishlist-table th,
+#wishlist-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+#wishlist-table img {
+  width: 100px;
+  height: auto;
+}
+
+#empty-message {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-buttons button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.action-buttons button:nth-child(1) {
+  background-color: #333;
+  color: #fff;
+}
+
+.action-buttons button:nth-child(2) {
+  background-color: #f00;
+  color: #fff;
+}
+
+.view-product {
+  color: #007bff;
+}
+/* WIISHLIST END*/
+
+/* CART START*/
+
+#cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#cart-table th,
+#cart-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+#cart-table img {
+  width: 100px;
+  height: auto;
+}
+
+#empty-message {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-buttons button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.action-buttons button:nth-child(1) {
+  background-color: #333;
+  color: #fff;
+}
+
+.action-buttons button:nth-child(2) {
+  background-color: #f00;
+  color: #fff;
+}
+
+.coupon-code,
+.checkout {
+  margin-top: 20px;
+}
+
+#coupon-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 60%;
+  margin-right: 10px;
+}
+
+#apply-coupon {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#cart-total {
+  font-weight: bold;
+}
+
+#total-amount {
+  font-size: 1.2em;
+}
+/* CART END*/
+
+/* track order start*/
+
+.track-order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.notifications {
+  position: relative;
+}
+
+.trucking {
+  font-size: 1.5em;
+  color: #333;
+  margin-right: 10px;
+}
+
+.notification-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 50%;
+  font-size: 0.8em;
+}
+
+.active-orders {
+  margin-bottom: 20px;
+}
+
+.active-orders a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.track-order-form {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.track-order-form h2 {
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+/* track order end*/
+
+/* order history start*/
+
+#order-history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#order-history-table th,
+#order-history-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+#order-history-table img {
+  width: 100px;
+  height: auto;
+}
+
+#empty-message {
+  text-align: center;
+  margin-top: 20px;
+}
+/* order history end*/
