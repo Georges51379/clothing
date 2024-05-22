@@ -1,13 +1,13 @@
 <div class="top-wrapper">
     <div class="topnav" id="myTopnav">
         <div class="middle-links">
-            <a href="#">welcome user</a>
-            <a href="#"><i class="fas fa-user"></i></a>
-            <a href="#"><i class="fas fa-heart"></i></a>
-            <a href="#"><i class="fas fa-shopping-cart"></i></a>
-            <a href="#"><i class="fas fa-truck"></i></a>
-            <a href="#"><i class="fas fa-box-open"></i></a>
-            <a href="#"><i class="fas fa-sign-in-alt"></i></a>
+            <a href="shop.php">welcome user</a>
+            <a href="account.php"><i class="fas fa-user"></i></a>
+            <a href="wishlist.php"><i class="fas fa-heart"></i></a>
+            <a href="cart.php"><i class="fas fa-shopping-cart"></i></a>
+            <a href="track-order.php"><i class="fas fa-truck"></i></a>
+            <a href="order-history.php"><i class="fas fa-box-open"></i></a>
+            <a href="login-user.php"><i class="fas fa-sign-in-alt"></i></a>
             <a href="javascript:void(0);" class="icon" onclick="hamburgerResponsive()">
             <i class="fa fa-bars"></i>
         </a>
