@@ -25,18 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   }
 
-  // Hamburger responsive function
-  function hamburgerResponsive() {
-      const topnav = document.getElementById("myTopnav");
-
-      if (topnav) {
-          if (topnav.className === "topnav") {
-              topnav.className += " responsive";
-          } else {
-              topnav.className = "topnav";
-          }
-      }
-  }
 
   // Attach event listeners
   const navbarToggler = document.querySelector('.navbar-toggler');
