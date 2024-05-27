@@ -8,22 +8,12 @@
 </head>
 <body>
     <div class="admin-panel">
-        <nav class="sidebar">
-            <ul>
-                <li><a href="#dashboard">Dashboard</a></li>
-                <li><a href="#users">Users</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#orders">Orders</a></li>
-                <li><a href="#ads">Ads</a></li>
-                <li><a href="#settings">Settings</a></li>
-                <li><a href="#logout" class="logout"><img src="logout-icon.png" alt="Logout"></a></li>
-            </ul>
-        </nav>
+        <?php include 'include/sidebar.inc.php'; ?>
         <div class="main-content">
             <h1>Welcome to Admin Panel</h1>
             <!-- Add your main content here -->
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
