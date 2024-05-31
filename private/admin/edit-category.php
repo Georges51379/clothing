@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <textarea id="description" name="description" rows="4" value="<?php echo $specificCategoryRws['cat_description']; ?>" required></textarea>
+                <input type="text" id="description" name="description" value="<?php echo $specificCategoryRws['cat_description']; ?>" required>
             </div>
             <div class="form-group">
                 <label for="status">Status</label>

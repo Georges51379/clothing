@@ -12,9 +12,11 @@ $getAllCategoryQuery = mysqli_query($con, "SELECT * FROM category");
 $allCategoryRows = mysqli_fetch_all($getAllCategoryQuery, MYSQLI_ASSOC);
 
 
-// get specific category
-$getSpecificCategoryQuery = mysqli_query($con, "SELECT * FROM category WHERE cat_token = '".$GET['category']."'");
-$specificCategoryRws = mysqli_fetch_array($getSpecificCategoryQuery);
+if (isset($_GET['editCatID'])) {
+    $editCatID = $_GET['editCatID'];
+    $getSpecificCategoryQuery = mysqli_query($con, "SELECT * FROM category WHERE cat_token = '$editCatID'");
+    $specificCategoryRws = mysqli_fetch_array($getSpecificCategoryQuery);
+}
 
 // add category
 if(isset($_POST['addCategory'])){
@@ -41,5 +43,24 @@ if(isset($_GET['catID'])){
     exit();
 }
 
+
+// edit category
+if (isset($_POST['editCategory'])) { // Use the correct POST name
+    $name = $_POST['name'];
+    $description = $_POST['description'];
+    $status = $_POST['status'];
+    $token = $_POST['cat_token'];
+    $currentdate = date('Y-m-d');
+
+    $editCategoryQuery = mysqli_query($con, "UPDATE category SET cat_name='$name', cat_description='$description', 
+    cat_status='$status', cat_update_date='$currentdate' WHERE cat_token='$token'");
+
+    if ($editCategoryQuery) {
+        header('Location: admin/category.php'); // Redirect to the correct location
+        exit();
+    } else {
+        echo "Error updating record: " . mysqli_error($con); // Display an error if the query fails
+    }
+}
 
 ?>

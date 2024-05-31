@@ -1,3 +1,4 @@
+<?php require_once '../private/dataProcessing.php'; ?>
 <div class="top-wrapper">
     <div class="topnav" id="myTopnav">
         <div class="middle-links">
@@ -17,7 +18,7 @@
         <div class="shop-bar">
         <div class="btn-group dropend">
             <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                women
+                <?php echo $womenCategory; ?>    
             </button>
             <ul class="dropdown-menu dropdown-menu-dark">
                 <li class="dropdown-list"><a href="#" class="dropdown-links">all</a></li>
@@ -28,8 +29,8 @@
             <a href="index.php" class="shop-links">clothing brand</a>
             <div class="btn-group dropstart">
                 <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    men
-                </button>
+                <?php echo $menCategory; ?>       
+            </button>
                 <ul class="dropdown-menu dropdown-menu-dark">
                     <li class="dropdown-list"><a href="index.php" class="dropdown-links">all</a></li>
                     <li class="dropdown-list"><a href="#" class="dropdown-links">shirts</a></li>
