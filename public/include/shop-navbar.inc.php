@@ -1,41 +1,109 @@
-<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-<input type="checkbox" id="check">
-    <header class="shop-header">
-        <label for="check">
-            <i class="fas fa-bars" id="sidebar_btn"></i>
-        </label>
-        <div class="left_area">
-            <h3>clothing<span>brand</span></h3>
+<section class="sidebar">
+      <div class="nav-header">
+        <p class="logo">Tivotal</p>
+        <i class="bx bx-menu btn-menu"></i>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <i class="bx bx-search search-btn"></i>
+          <input type="text" placeholder="search..." />
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-home-alt-2"></i>
+            <span class="title">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-phone-call"></i>
+            <span class="title">Calls</span>
+          </a>
+          <span class="tooltip">Calls</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-bookmark"></i>
+            <span class="title">Bookmarks</span>
+          </a>
+          <span class="tooltip">Bookmarks</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-wallet-alt"></i>
+            <span class="title">Wallet</span>
+          </a>
+          <span class="tooltip">Wallet</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-devices"></i>
+            <span class="title">Devices</span>
+          </a>
+          <span class="tooltip">Devices</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="title">Setting</span>
+          </a>
+          <span class="tooltip">Setting</span>
+        </li>
+      </ul>
+      <div class="theme-wrapper">
+        <i class="bx bxs-moon theme-icon"></i>
+        <p>Dark Theme</p>
+        <div class="theme-btn">
+          <span class="theme-ball"></span>
         </div>
-        <div class="right_area">
-            <a href="#" class="logout_btn">Logout</a>
-        </div>
-    </header>
-    <div class="mobile_nav">
-        <div class="nav_bar">
-            <img src="1.png" class="mobile_profile_image" alt="Profile Image">
-            <i class="fa fa-bars nav_btn"></i>
-        </div>
-        <div class="mobile_nav_items">
-            <a href="shop.php">welcome user</a>
-            <a href="account.php"><i class="fas fa-user"></i>account</a>
-            <a href="wishlist.php"><i class="fas fa-heart"></i>wishlist</a>
-            <a href="cart.php"><i class="fas fa-shopping-cart"></i>cart</a>
-            <a href="track-order.php"><i class="fas fa-truck"></i>track order</a>
-            <a href="order-history.php"><i class="fas fa-box-open"></i>order history</a>
-            <a href="request-product.php"><i class="fas fa-box"></i>request product</a>
-        </div>
-    </div>
-    <div class="sidebar">
-        <div class="profile_info">
-            <img src="https://i.imgur.com/iQpdHb2.jpg" class="profile_image" alt="Admin Image">
-            <h4>admin name</h4>
-        </div>
-        <a href="index.php"><i class="fas fa-home"></i><span>home</span></a>
-        <a href="dashboard.php"><i class="fas fa-tachometer-alt"></i><span>dashboard</span></a>
-        <a href="category.php"><i class="fas fa-list"></i><span>category</span></a>
-        <a href="products.php"><i class="fas fa-boxes"></i><span>product</span></a>
-        <a href="users.php"><i class="fas fa-users"></i><span>users</span></a>
-        <a href="ads.php"><i class="fas fa-ad"></i><span>ads</span></a>
-        <a href="settings.php"><i class="fas fa-cog"></i><span>settings</span></a>
-    </div>
+      </div>
+    </section>
+    <section class="home">
+      <p>Home Content Here</p>
+    </section>
+    <script>
+      const btn_menu = document.querySelector(".btn-menu");
+      const side_bar = document.querySelector(".sidebar");
+
+      btn_menu.addEventListener("click", function () {
+        side_bar.classList.toggle("expand");
+        changebtn();
+      });
+
+      function changebtn() {
+        if (side_bar.classList.contains("expand")) {
+          btn_menu.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else {
+          btn_menu.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+      }
+
+      const btn_theme = document.querySelector(".theme-btn");
+      const theme_ball = document.querySelector(".theme-ball");
+
+      const localData = localStorage.getItem("theme");
+
+      if (localData == null) {
+        localStorage.setItem("theme", "light");
+      }
+
+      if (localData == "dark") {
+        document.body.classList.add("dark-mode");
+        theme_ball.classList.add("dark");
+      } else if (localData == "light") {
+        document.body.classList.remove("dark-mode");
+        theme_ball.classList.remove("dark");
+      }
+
+      btn_theme.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+        theme_ball.classList.toggle("dark");
+        if (document.body.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
+        }
+      });
+    </script>
