@@ -7,10 +7,13 @@
 <body>
     <!-- INCLUDES SECTION -->
     <?php
-       include 'include/arrow_to_top.inc.php';
+        include 'include/arrow_to_top.inc.php';
         include 'include/shop-navbar.inc.php';
         include 'include/shop-banner.inc.php';
     ?>
+<div class="content">
+
+
 
 <div class="wrapper">
 
@@ -112,6 +115,7 @@
     include 'include/progressbar.inc.php';
     include 'include/footer.inc.php';
 ?>
+</div>
 
 <script src="js/script.js"></script>
 </body>

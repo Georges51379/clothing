@@ -34,3 +34,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
   window.onscroll = myFunction;
 });
+
+
+
+var menuContainer = document.querySelector('.navbar-container');
+	var menuBtn = document.querySelector('.navbar-header .logo .logoImg i');
+	var body = document.querySelector('body');
+	var toggleBtn = document.querySelector('.btn-container .button');
+	var darkModeText = document.querySelector('.dark-light-mode .text');
+
+	menuBtn.addEventListener('click', menuToggle);
+	toggleBtn.addEventListener('click', darkMode);
+
+	function menuToggle(){
+		menuContainer.classList.toggle('active');
+	}
+
+	function darkMode(){
+		toggleBtn.classList.toggle('active');
+		body.classList.toggle('active');
+		if(darkModeText.innerHTML == 'Light Mode'){
+			darkModeText.innerHTML = 'Dark Mode';
+		}
+		else{
+			darkModeText.innerHTML = 'Light Mode';
+		}
+	}
