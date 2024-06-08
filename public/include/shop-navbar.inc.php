@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Sidebar</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<?php require_once '../private/dataProcessing.php'; ?>
     <style>
         /* Add your custom CSS styles here */
         body {
@@ -44,6 +38,7 @@
             cursor: pointer;
             outline: none;
             transition: color 0.3s ease;
+            text-transform: capitalize;
         }
 
         .sidenav a:hover, .dropdown-btn:hover {
@@ -202,8 +197,7 @@
             color: #4CAF50;
         }
     </style>
-</head>
-<body>
+
     <div class="sidenav">
         <a href="#" onclick="toggleSidenav()">
             <i class="fas fa-bars"></i>
@@ -215,22 +209,23 @@
             <button class="search-btn"><i class="fas fa-search"></i></button>
         </div>
         <hr>
-        <a href="#"><i class="fas fa-tshirt"></i> <span>T-shirts</span></a>
-        <a href="#"><i class="fas fa-tshirt"></i> <span>Tops</span></a>
-        <a href="#"><i class="fas fa-tshirt"></i> <span>Skirts</span></a>
-        <a href="#"><i class="fas fa-tshirt"></i> <span>Bikini</span></a>
+        <a href="index.php"><i class="fas fa-home"></i> <span>home</span></a>
         <button class="dropdown-btn">
-            <i class="fas fa-user"></i>
-            <span>Account</span>
+            <i class="fas fa-list"></i>
+            <span>category</span>
             <i class="fas fa-chevron-down"></i>
         </button>
         <div class="dropdown-container">
-            <a href="#"><i class="fas fa-user"></i> <span>Profile</span></a>
-            <a href="#"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
+            <?php while($categoryRws = mysqli_fetch_array($getCategoryQuery)){
+                $category = $categoryRws['cat_name']; ?>
+            <a href="#"><i class="fas fa-shirt"></i> <span><?php echo htmlentities($category); ?></span></a>
+            <?php } ?>
         </div>
-        <a href="#"><i class="fas fa-shopping-cart"></i> <span>Cart</span></a>
+        <a href="#"><i class="fas fa-user"></i> <span>account</span></a>
         <a href="#"><i class="fas fa-heart"></i> <span>Wishlist</span></a>
-        <a href="#"><i class="fas fa-box"></i> <span>Orders</span></a>
+        <a href="#"><i class="fas fa-shopping-cart"></i> <span>Cart</span></a>
+        <a href="#"><i class="fas fa-box"></i> <span>track orders</span></a>
+        <a href="#"><i class="fas fa-box"></i> <span>order history</span></a>
         <a href="#"><i class="fas fa-plus"></i> <span>Request Product</span></a>
         <a href="#"><i class="fas fa-sign-in-alt"></i> <span>Login</span></a>
         <hr>
@@ -280,8 +275,4 @@ const searchContainer = document.querySelector('.search-container');
 searchIcon.addEventListener('click', () => {
   searchContainer.classList.toggle('show-search');
 });
-
-
     </script>
-</body>
-</html>

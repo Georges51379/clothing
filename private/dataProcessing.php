@@ -7,11 +7,6 @@ error_reporting(0);
 
 // get categories
 
-$getWomenCategoryQuery = mysqli_query($con, "SELECT * FROM category WHERE cat_status = 'Active' AND cat_description = 'women'");
-$womenCategoryRws = mysqli_fetch_array($getWomenCategoryQuery);
-$womenCategory = $womenCategoryRws['cat_name'];
+$getCategoryQuery = mysqli_query($con, "SELECT * FROM category WHERE cat_status = 'Active'");
 
-$getMenCategoryQuery = mysqli_query($con, "SELECT * FROM category WHERE cat_status = 'Active' AND cat_description = 'men'");
-$menCategoryRws = mysqli_fetch_array($getMenCategoryQuery);
-$menCategory = $menCategoryRws['cat_name'];
 ?>
