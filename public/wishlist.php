@@ -37,7 +37,6 @@
 
 <?php
     include 'include/progressbar.inc.php';
-    include 'include/footer.inc.php';
 ?>
 
 <script src="js/script.js"></script>

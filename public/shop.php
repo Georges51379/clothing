@@ -16,6 +16,12 @@
 
 
 <div class="wrapper">
+<?php if($subcategory = $_GET['s']){ ?>
+
+<div class="test"> subcategory for each category</div>
+
+
+            <?php }else{ ?>
 
 <!-- WOMEN SECTION-->
 <h2 class="container-title">women</h2>
@@ -106,6 +112,8 @@
     
                 <!-- End product block -->
             </div>
+
+                <?php } ?>
         </div><!-- END CONTAINER -->
 
 
@@ -113,7 +121,6 @@
 
 <?php
     include 'include/progressbar.inc.php';
-    include 'include/footer.inc.php';
 ?>
 </div>
 

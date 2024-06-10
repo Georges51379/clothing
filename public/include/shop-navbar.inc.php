@@ -210,6 +210,7 @@
         </div>
         <hr>
         <a href="index.php"><i class="fas fa-home"></i> <span>home</span></a>
+        <a href="shop.php"><i class="fas fa-home"></i> <span>shop</span></a>
         <button class="dropdown-btn">
             <i class="fas fa-list"></i>
             <span>category</span>
@@ -217,17 +218,18 @@
         </button>
         <div class="dropdown-container">
             <?php while($categoryRws = mysqli_fetch_array($getCategoryQuery)){
-                $category = $categoryRws['cat_name']; ?>
-            <a href="#"><i class="fas fa-shirt"></i> <span><?php echo htmlentities($category); ?></span></a>
+                $category = $categoryRws['cat_name'];
+                $categoryToken = $categoryRws['cat_token']; ?>
+            <a href="shop.php?s=<?php echo htmlentities($categoryToken); ?>"><i class="fas fa-shirt"></i> <span><?php echo htmlentities($category); ?></span></a>
             <?php } ?>
         </div>
-        <a href="#"><i class="fas fa-user"></i> <span>account</span></a>
-        <a href="#"><i class="fas fa-heart"></i> <span>Wishlist</span></a>
-        <a href="#"><i class="fas fa-shopping-cart"></i> <span>Cart</span></a>
-        <a href="#"><i class="fas fa-box"></i> <span>track orders</span></a>
-        <a href="#"><i class="fas fa-box"></i> <span>order history</span></a>
-        <a href="#"><i class="fas fa-plus"></i> <span>Request Product</span></a>
-        <a href="#"><i class="fas fa-sign-in-alt"></i> <span>Login</span></a>
+        <a href="account.php"><i class="fas fa-user"></i> <span>account</span></a>
+        <a href="wishlist.php"><i class="fas fa-heart"></i> <span>Wishlist</span></a>
+        <a href="cart.php"><i class="fas fa-shopping-cart"></i> <span>Cart</span></a>
+        <a href="track-order.php"><i class="fas fa-box"></i> <span>track orders</span></a>
+        <a href="order-history.php"><i class="fas fa-box"></i> <span>order history</span></a>
+        <a href="request-product.php"><i class="fas fa-plus"></i> <span>Request Product</span></a>
+        <a href="login-user.php"><i class="fas fa-sign-in-alt"></i> <span>Login</span></a>
         <hr>
         <div class="toggle-container">
             <label class="switch">
